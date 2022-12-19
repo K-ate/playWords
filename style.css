@@ -1,0 +1,584 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bground);
+    font-family: sans-serif;
+    /* overflow: hidden; */
+}
+
+:root{
+  
+    --bground: rgb(246, 247, 236);
+    --btncol: rgb(219, 219, 209);
+    --btnhover: rgb(171, 172, 164);
+    --wordcol:rgb(246, 247, 236);
+    --footer:rgb(196, 198, 188);
+    --wordclk:rgb(153, 212, 193);
+    --wordhover:rgb(186, 231, 217);
+
+    --true:rgb(108, 255, 120);
+    --false:rgb(255, 89, 89);
+    --textcol: rgb(0,0,0); 
+    --textcont:rgb(84, 84, 84); 
+
+    --bground2: rgb(235, 235, 235);
+    --btncol2: rgb(255, 255, 255);
+    --btnhover2: rgb(171, 172, 164);
+    --wordcol2:rgb(255, 255, 255);
+    --footer2:rgb(162, 162, 162);
+    --wordclk2:rgb(161, 192, 191);
+    --wordhover2:rgb(195, 235, 234);
+    
+}
+
+
+
+
+
+.header {
+    display: flex;
+    margin: 0px;
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    text-align:center; 
+    vertical-align: text-bottom;
+    line-height: 50px;
+    grid-area: h;
+    flex-direction: row;
+}
+
+.main{
+    background-color: var(--bground);
+    /* background-color: aqua; */
+    border: 3px solid var(--textcol) ;
+    border-radius: 5px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-row: m;
+    padding: 20px;
+
+    width: 800px;
+    /* height: 650px; */
+}
+
+.main.col2{
+    background-color: var(--bground2);
+}
+
+
+
+.footer {
+    background-color: var(--footer);
+    position: relative;
+    width: 100%;
+    line-height: 50px;
+    grid-area: f;
+    margin: auto;
+    text-align: center;
+
+}
+.footer.col2{
+    background-color: var(--footer2);
+}
+
+
+.container {
+    background: url('3.png');
+    background-color: var(--bground);
+    background-size: cover;
+    display: grid;
+    gap: 0px;
+    height: 100%;
+    width: 100%;
+    
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+      "h"
+      "m"
+      "f";  
+    transition: all 1s;
+}
+
+.container.col2{
+    transition: all 1s;
+    background: url('12.png');
+    background-size: cover;
+}
+
+.start{
+    position: relative;
+    height: 50px;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--textcol);
+    background-color: var(--btncol);
+    text-align: center;
+    line-height: 50px;
+}
+.start{
+    background-color: var(--btncol2);
+}
+
+.starttext{ 
+    text-decoration: none;
+    color: var(--textcol);
+    font-size: 26px;
+}
+
+.hedtext{
+    color: var(--textcol);
+    font-size: 32px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+.hedtext.none{
+    display: none;
+}
+
+.textcont{
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: var(--textcont);
+  }
+
+  .textcont:hover {
+    text-decoration: underline;
+    color: var(--textcol) ;
+  }
+
+  .maintext{
+    position: relative;
+    font-size: 22px;
+    margin-top: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0%;
+  }
+  .maintext.none{
+    display: none;
+  }
+
+  .nextLevelText{
+    position: relative;
+    font-size: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 100%;
+  }
+
+
+.task {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.wordcontainer{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* .wordcontainerLast{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 15px;
+} */
+
+
+.word{
+    position: relative;
+    width: 30%;
+    border-radius: 8px;
+    border: 2px solid var(--textcol);
+    height: 70px;
+    line-height: 70px;
+    font-size: 18px;
+    margin: auto;
+    /* background: var(--wordcol); */
+}
+
+/* .word.col2{
+    background: var(--wordcol2);
+}
+.word.col2:hover{
+    background: var(--wordhover2);
+}
+.word.col2.clk{
+    background: var(--wordclk2);
+} */
+
+
+.word:hover {
+    background-color: var(--wordhover)
+}
+.word.clk{
+    background-color: var(--wordclk);
+}
+.word.true{
+    background-color: var(--true);
+}
+.word.false{
+    background-color: var(--false);
+}
+
+
+
+
+.counter{
+    width: 30%;
+    border-radius: 8px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    background-color: var(--bground);
+    border: 2px solid black;
+    /* background-color: aquamarine; */
+    margin-left: auto;
+    margin-right: auto;
+}
+.counter.col2{
+    background-color: var(--bground2);
+}
+
+.timer{
+    width: 30%;
+    border-radius: 8px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    /* background-color: aqua; */
+    border: 2px solid black;
+    background-color: var(--bground);
+    margin-left: auto;
+    margin-right: auto;
+}
+.timer.col2{
+    background-color: var(--bground2);
+
+}
+
+.namePlayer{
+    width: 35%;
+    border-radius: 8px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    border: 2px solid black;
+    /* background-color: rgb(255, 0, 0); */
+    background-color: var(--bground);
+    /* border: 2px solid black; */
+    /* border-radius: 8px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+.namePlayer.col2{
+    background-color: var(--bground2);
+}
+
+
+.namePlayer.none{
+    display: none;
+}
+.timer.none{
+    display: none;
+}
+.counter.none{
+    display: none;
+}
+
+.but{
+    height: 40px;
+    font-size: 18px;
+    background-color: var(--btncol);
+
+    border: 2px solid var(--textcol) ;
+
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 8px;
+    margin: auto;
+    margin-bottom: 10px;
+    transition:all 1s;
+    transition: border 0.5s;
+
+
+}
+.but.col2{
+    background-color: var(--btncol2);
+    transition: all 1s;
+
+
+}
+.but.dashed{
+    border: 2px dashed  var(--textcol) ;
+}
+.but.double{
+    border: thick double var(--textcol) ;
+}
+
+.but:hover{
+    background-color: var(--btnhover);
+}
+
+.but.none{
+    display: none;
+}
+
+
+.task2{
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    /* border: 2px solid var(--textcol); */
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    /* background: var(--bground); */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.containerTask2{
+    display: flex;
+    position: relative;
+    /* background-color: aqua; */
+    flex-direction: column;
+    width: 25%;
+    height: 80%;
+}
+
+.containerWord2{
+    display: flex;
+    position: relative;
+    /* background-color: aqua; */
+    flex-direction: column;
+    width: 30%;
+    height: 80%;
+    margin-left: auto;
+}
+
+.word2{
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--textcol);
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    /* background: var(--wordcol); */
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    
+}
+
+.containerWord3{
+    display: flex;
+    position: relative;
+    /* background-color: aqua; */
+    flex-direction: column;
+    width: 35% ;
+    height: 80%;
+    margin-left: auto;
+}
+
+.word3{
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    border: 4px solid var(--textcont);
+    height: 65px;
+    line-height: 65px;
+    /* font-size: 18px; */
+    /* background: var(--bground); */
+    margin-top: auto;
+    margin-bottom: auto;
+    /* padding: 0; */
+    padding-right: 5px;
+}
+
+.inp{
+    position: relative;
+    background-color: var(--btncol);
+    border: 3px solid black;
+    width: 40%;
+    /* height: 50px; */
+    line-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    font-size: 20px;
+    /* padding-left: 15px; */
+
+    text-align: center;
+    transition: all 1s;
+
+}
+.inp.col2{
+    background-color: var(--btncol2);
+    transition: all 1s;
+
+}
+.inp.none{
+    display: none;
+}
+.inp.error{
+    background-color: rgb(255, 149, 149);
+    border: 3px solid red;
+}
+
+.textComm{
+    font-size: 16px;
+    color: rgb(142, 142, 142);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.contbut{
+    width: 100%;
+    /* height: 50px; */
+    display: inline;
+    /* background-color: aquamarine; */
+    margin: auto;
+}
+
+.score{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    /* margin-bottom: auto; */
+    font-size: 26px;
+}
+.score.none{
+    display: none;
+}
+
+.wordLast{
+    width: 170px;
+    border-radius: 5px;
+    border: 2px solid var(--textcol);
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    /* background: var(--wordcol); */
+    margin:5px;
+    position:absolute;
+    /* float:right; */
+}
+
+
+
+
+.wordLast:hover{
+    background-color: var(--wordhover);
+}
+
+.wordLast.clk{
+    background-color: var(--wordclk);
+}
+
+.wordLast.true{
+    background-color: var(--true);
+}
+
+.wordLast.false{
+    background-color: var(--false);
+}
+
+.colText{
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+.colCont{
+    /* background-color: aqua; */
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kubok{
+    background: url('kubok.png');
+    width: 168px;
+    height: 146px;
+    background-size: cover;
+    position: relative;
+    /* display: inline-block; */
+    margin-left: auto;
+    margin-right: auto;
+
+    animation: kubok_rotate 2s infinite;
+    animation-delay: 1s;
+}
+@keyframes kubok_rotate{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2)    
+    }
+    100% {
+        transform: scale(1); 
+        
+    }
+}
+
+.playName{
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    background-color: var(--wordhover);
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 24px;
+}
+.playName.col2{
+    background-color: rgb(255, 166, 204);
+}
+
+.playNameCont{
+    width: auto;
+    height: auto;
+    /* display:inline-block; */
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+

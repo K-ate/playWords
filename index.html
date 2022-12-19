@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+
+    <div class="container">
+        <div class="header">
+
+            <!-- ================================ -->
+            <div class="namePlayer none"></div>        
+            <div class="timer none"></div>
+            <div class="counter none"></div>
+            <!-- ================================ -->
+
+        </div>
+
+        <div class="main">
+            <!-- <p class="hedtext">Игра "Слова"</p> -->
+            <div class="playNameCont">
+                <div class="playName">C</div>
+                <div class="playName">Л</div>
+                <div class="playName">О</div>
+                <div class="playName">В</div>
+                <div class="playName">А</div>
+            </div>
+
+            <input placeholder="Введите имя" type="text" class="inp">
+            <button class="but" id="firstBtn">Начать игру</button>  
+            <button class="but" id="results">Посмотреть рейтинг</button> 
+            <p class="colText">Выберите цветовое оформление игры</p>
+            <div class="colCont">
+                <button class="but" id="col1">Цвет 1</button>  
+                <button class="but" id="col2">Цвет 2</button>  
+
+            </div>
+
+            <div class="task"></div>
+
+            <div class="score none"></div>
+
+            <div class="wordcontainer">
+
+                <p class="textComm">Для смены дизайна кнопок нажмите клавишы Shift+Q, Shift+W или Shift+E</p>
+                <p class="maintext none">В этой игре Вам нужно будет найти все слова, относящиеся к заданной части речи. 
+                На первом уровне у вас будет 6 секунд на выполнение задания.<br/> За каждый правильный ответ будет начислен 1 балл, а за каждый неправильный - 
+                балл будет отниматься.<br/><br/> Для начала игры нажмите кнопку "Начать". Удачи!</p>
+                <button class="but none" id="start">Начать</button>  
+            </div>
+
+            <div class="contbut">
+                <button class="but none" id="next">Продолжить</button>
+                <button class="but none" id="newPlay">Попобовать снова</button> 
+                <button class="but none" id="next2">Продолжить</button>
+                <button class="but none" id="newPlay2">Попобовать снова</button> 
+                <button class="but none" id="next3">Продолжить</button>
+                <button class="but none" id="newPlay3">Попобовать снова</button> 
+
+                <button class="but none" id="secondLvl">Cледующий уровень</button> 
+                <button class="but none" id="thirdLvl">Cледующий уровень</button> 
+
+                <button class="but none" id="again">Пройти заново</button>
+                <button onclick="document.location='index.html'" class="but none" id="toMain">На главную</button>
+            </div>
+            <!-- ================================ -->
+
+        </div>
+
+        <div class="footer">
+            <a href="https://vk.com/k__ate" class="textcont"> Вконтакте</a> 
+            <a href="https://www.instagram.com/k_a_t_e__k" class="textcont"> Instagram</a> 
+            <a href="https://t.me/katya_kovrigina" class="textcont"> Telegram</a> 
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+    <!-- <script src="jsMain.js"></script> -->
+ </body>
+ </html>
